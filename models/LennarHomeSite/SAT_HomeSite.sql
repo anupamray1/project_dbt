@@ -1,6 +1,6 @@
 {{ config(
     materialized='table',
-    tags=["Source_system_1"]
+    tags=["Source_system_2"]
 ) }}
 
 ---definitions
@@ -96,5 +96,3 @@ SALEDATE
  from 
 {{ source('Homesite', 'HOMESITEMASTER') }}
 
-{{run_end_hook(Job_id,model_name,table_name)}}
-{{GetJobStatisticMacro(Job_id,table_name)}}
